@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3rem;
+}
+table{    
+    padding-top: 100px;
+}
+table, tr, td{
+    border: none;
+}
+th, td{
+    padding: 1rem 2rem;
+}
