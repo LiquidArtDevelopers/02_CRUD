@@ -11,6 +11,25 @@
     <?php include './includes/_nav.php';?>
 
     <h1>CONSULTA A TABLA SEGÚN FILTRADO DE FORMULARIO</h1>
+
+    <form action="./index2.php" method="post">
+        <input type="text" name="nombre">
+        <select name="rol">
+            <?php
+            include './includes/_conexion_bbdd.php';
+            $sql="SELECT * FROM roles";
+            $resultado=mysqli_query($con,$sql);
+            if(mysqli_num_rows($resultado)>0){
+                while($fila=mysqli_fetch_array($resultado)){
+                    echo "<option value='".$fila['rol']."'>".$fila['rol']."</option>";
+                }
+            }
+            ?>
+        </select>
+        <input type="submit" value="Buscar">
+    </form>
+
+    
     <table>
         <tr>
             <th>Id Usuario</th>
@@ -21,7 +40,7 @@
             <th>Rol</th>
         </tr>
         <?php
-        include './includes/_conexion_bbdd.php';
+        
 
         if(isset($_POST['nombre'])){
             $filtrarPorNombre=$_POST['nombre'];
@@ -48,23 +67,8 @@
             }
         }
         ?>        
-    </table>    
+    </table>  
     
-    <form action="./index.php" method="post">
-        <input type="text" name="nombre">
-        <select name="rol">
-            <?php
-            $sql="SELECT * FROM roles";
-            $resultado=mysqli_query($con,$sql);
-            if(mysqli_num_rows($resultado)>0){
-                while($fila=mysqli_fetch_array($resultado)){
-                    echo "<option value=".$fila['rol'].">".$fila['rol']."</option>";
-                }
-            }
-            ?>            
-        </select>
-        <input type="submit" value="Buscar">
-    </form>
     
 
 </body>

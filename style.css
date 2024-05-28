@@ -32,11 +32,10 @@ nav a{
     font-size: 1.2rem;
 }
 table{    
-    padding-top: 100px;
+    padding-top: 2rem;
     border: hidden; /* le quitamos el borde por defecto a la tabla */
     border-spacing: 0; /* quita los bordes interiores que pone por defecto la tabla  */
-    border-bottom: 1px solid black; /* la damos borde botton a la tabla */
-}
+    }
 table, tr, td{
     border: none;
 }
