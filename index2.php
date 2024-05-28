@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <?php include './includes/_nav.php';?>
+
     <h1>CONSULTA A TABLA SEGÚN FILTRADO DE FORMULARIO</h1>
     <table>
         <tr>

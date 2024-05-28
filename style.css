@@ -12,12 +12,48 @@ body{
     justify-content: center;
     row-gap: 3rem;
 }
+nav{
+    width: 100%;
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(97, 97, 97);
+}
+nav ul{
+    display: flex;
+    column-gap: 4rem;
+    list-style: decimal-leading-zero;
+    color: white;
+}
+nav a{
+    color: white;
+    font-size: 1.2rem;
+}
 table{    
     padding-top: 100px;
+    border: hidden; /* le quitamos el borde por defecto a la tabla */
+    border-spacing: 0; /* quita los bordes interiores que pone por defecto la tabla  */
+    border-bottom: 1px solid black; /* la damos borde botton a la tabla */
 }
 table, tr, td{
     border: none;
 }
+tr:nth-child(even){ /* los tr pares se sombrean */
+    background-color: rgb(219, 219, 219);
+}
 th, td{
     padding: 1rem 2rem;
+}
+.paginacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1rem;
+}
+.paginacion a{
+    color: rgb(71, 71, 71);
+    font-size: 1.3rem;
 }
